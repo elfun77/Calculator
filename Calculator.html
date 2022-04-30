@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--(1)HTML 언어를 이용하여 계산기의 뼈대를 만든다.-->
+
+    <meta charset="UTF-8">
+    <!--html 파일의 인코딩을 알려줌 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        viewport : 화면 상 표시 영역
+        content=device-width : 장치에 따른 크기 표시
+        initial-scale : 초기 배율
+    -->
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        "style.css를 불러오라"
+        
+        Html 페이지와의 관계(rel) : stylesheet
+        출처 : style.css
+    -->
+
+</head>
+<body>
+    <main>
+        <input type="text" disabled>
+        <!--text 타입의 요소를 사용자가 클릭할 수 없고 사용할 수 없다.-->
+        <div class="button-wrap">
+            <!--"button-wrap"이라는 Class를 생성하여 버튼을 만든다.-->
+            <button data-type="ac" class="ac">AC</button>
+            <!--나눗셈 버튼에 해당하는 클래스 생성--> 
+            <button>&divide;</button>
+            <!--나눗셈 표시를 위한 토큰 입력-->
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button data-type="operator">&times;</button>
+            <!--곱셈 표시를 위한 토큰 입력-->
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button data-type="operator">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button data-type="operator">+</button>
+            <button class="zero">0</button>
+            <!--0 버튼에 해당하는 클래스 생성--> 
+            <button>.</button>
+            <button data-type="equals" class="equals">=</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
