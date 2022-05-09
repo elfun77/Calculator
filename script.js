@@ -5,7 +5,6 @@ class Calculator {
         //this : 인스턴스 자신을 가리킨다.
         this.displayElement = displayElement;
         this.operatorCheck = true; //숫자 입력 전 연산자가 입력되는 것을 방지하기 위함
-        this.displayContent = '';
         //Calculator 클래스 내부의 인스턴스 변수 displayContent에 빈 문자열을 담는다.
         //자료형 : 문자열(따옴표를 표시했기 때문.)
         this.equalsCheck = false; // = 버튼 클릭 여부 관리
@@ -17,9 +16,8 @@ class Calculator {
     appendNumber(number){
         if(this.equalCheck) {
             this.displayContent = number // 새로운 식 입력
-            this.operatorCheck = false
-        }
-        else {
+            this.equalsCheck = false
+        } else {
             this.displayContent += number // 기존 식에 추가
         }
         this.operatorCheck = false
@@ -31,7 +29,7 @@ class Calculator {
         if(this.operatorCheck) return false //operatorCheck 함수가 On된 상태라 연산자 입력 상태라면 함수를 강제로 빠져나간다.  
         if(this.equalsCheck) this.equalsCheck = false
         this.displayContent += operator
-        this.operatorCheck = true
+        return this.operatorCheck = true
     }
 
     //새 메소드 updateDisplay 추가
@@ -48,9 +46,12 @@ class Calculator {
 
     //새 메소드 compute 추가
     compute() {
-        if(this.operatorCheck) return
-        this.displayContent = eval(this.displayContent.replace('\u00D7','*').replace('\u00F7','/'))
-        this.equalCheck = true
+        if (this.operatorCheck) return
+        this.displayContent = eval(this.displayContent
+            .replace('\u00D7','*')
+            .replace('\u00F7','/')
+        )
+        this.equalsCheck = true
     }
 }
 

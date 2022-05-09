@@ -6,7 +6,7 @@
 - main이라는 html 요소를 선택자로 하고 넓이를 150px로 설정한다.
 */
 main {
-    width: 150px;
+    width: 300px;
 }
 
 /*
@@ -41,7 +41,7 @@ main {
 }
 
 input,button {
-    height: 35px;
+    height: 70px;
     outline: none;
 }
 
@@ -51,13 +51,13 @@ input {
     border: none;
     background: #5B5B5D;
     padding-right: 1rem;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 /* 버튼 태그 스타일 설정 */
 button {
     background: #828284;
     border: 1px solid #454448;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 /* 4번째 요소마다 스타일 적용(처음에만 두 번째 적용) */
 button:nth-child(4n+2),button:last-child {
@@ -65,5 +65,5 @@ button:nth-child(4n+2),button:last-child {
 }
 
 button:hover {
-    opacity: 5;
+    opacity: .5;
 }

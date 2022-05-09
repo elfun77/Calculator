@@ -23,13 +23,13 @@
 </head>
 <body>
     <main>
-        <input type="text" disabled>
+        <input type="text" value="0" disabled>
         <!--text 타입의 요소를 사용자가 클릭할 수 없고 사용할 수 없다.-->
         <div class="button-wrap">
             <!--"button-wrap"이라는 Class를 생성하여 버튼을 만든다.-->
             <button data-type="ac" class="ac">AC</button>
             <!--나눗셈 버튼에 해당하는 클래스 생성--> 
-            <button>&divide;</button>
+            <button data-type="operator">&divide;</button>
             <!--나눗셈 표시를 위한 토큰 입력-->
             <button>7</button>
             <button>8</button>
@@ -50,6 +50,7 @@
             <button data-type="equals" class="equals">=</button>
         </div>
     </main>
+    <!-- Javascript 파일을 불러온다.-->
     <script src="script.js"></script>
 </body>
 </html>
