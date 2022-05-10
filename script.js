@@ -14,7 +14,7 @@ class Calculator {
     //새 메소드(appendNumber) 추가
     //덧셈 기능
     appendNumber(number){
-        if(this.equalCheck) {
+        if(this.equalsCheck) {
             this.displayContent = number // 새로운 식 입력
             this.equalsCheck = false
         } else {
